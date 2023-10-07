@@ -1,10 +1,11 @@
 import React from 'react';
 
 import styles from './app.scss';
+import NewAssessment from './components/NewAssessment';
 
 const app = () => {
     return (
-        <h1 className={styles.heading}>Assessment portal</h1>
+        <NewAssessment />
     )
 }
 

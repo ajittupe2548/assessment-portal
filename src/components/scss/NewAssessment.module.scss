@@ -1,0 +1,38 @@
+.container {
+    width: 346px;
+    border: 1px dashed #8DA4BF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    background-color: #F6F8FA;
+}
+
+.iconContainer {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.description {
+    text-align: center;
+}
+
+@media screen and (min-width: 420px) {
+    .container {
+        width: 388px;
+    }
+}
