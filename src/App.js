@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import styles from './app.scss';
-import Card from './components/Card';
+import Home from "./pages/Home";
 
 const app = () => {
-    return (
-        <Card />
-    )
-}
+    return <Home />;
+};
 
 export default app;

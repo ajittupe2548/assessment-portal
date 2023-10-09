@@ -1,108 +1,24 @@
 .container {
-    width: 346px;
-    border: 1px solid #8DA4BF;
+    background-color: #fff;
+    border: 1px solid #8da4bf;
     border-radius: 12px;
     padding: 14px;
-    background-color: #fff;
+    margin-top: 16px;
 }
 
 .header {
     display: flex;
     align-items: center;
     position: relative;
-    border-bottom: 1px dashed #8DA4BF;
+    border-bottom: 1px dashed #8da4bf;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-.infoWrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.durationWrapper {
-    display: inline-flex;
-    flex-direction: column;
-    margin-right: 10px;
-}
-
-.questionWrapper {
-    display: inline-flex;
-    flex-direction: column;
-}
-
-.share {
-    display: inline-flex;
-    height: 100%;
-    border: 1px solid #1C4980;
-    border-radius: 15px;
-    align-items: center;
-    padding: 2px 8px 2px 6px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.iconContainer {
-    height: 50px;
-    width: 50px;
-    background-color: #EBE8FD;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-
-.userIcon {
-    height: 100%;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #6548EE;
-    border-radius: 15px;
-    color: #fff;
+.title {
     font-weight: bold;
-}
-
-.userIconWrapper {
-    position: relative;
-    display: flex;
-    height: 100%;
-    width: 60px;
-}
-
-.userIcon1 {
-    position: absolute;
-    border: 2px solid #fff;
-}
-
-.userIcon2 {
-    position: absolute;
-    border: 2px solid #fff;
-    right: 15px;
-    background-color: #3079E1;
-}
-
-.userIcon3 {
-    position: absolute;
-    border: 2px solid #fff;
-    right: 0;
-    background-color: #E9407A;
-}
-
-.durationNumber {
-    font-weight: bold;
-}
-
-.userCount {
-    margin-left: 4px;
-    font-weight: bold;
-}
-
-.additionalInfo {
-    display: flex;
-    align-items: center;
+    margin-bottom: 2px;
+    font-size: 14px;
 }
 
 .jobDateContainer {
@@ -110,17 +26,19 @@
     align-items: center;
 }
 
-.date {
-    color: #8DA4BF;
-    margin-left: 6px;
+.divider {
+    height: 16px;
+    margin: 0 5px;
+    border-right: 1px solid #dadce0;
 }
 
-.linkContainer {
-    height: 16px;
-    width: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.dateContainer {
+    display: inline-flex;
+}
+
+.date {
+    color: #8da4bf;
+    margin-left: 6px;
 }
 
 .options {
@@ -135,34 +53,65 @@
     cursor: pointer;
 }
 
-.title {
-    font-weight: bold;
-    margin-bottom: 2px;
-    font-size: 14px;
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
-.dateContainer {
+.detailsWrapper {
     display: inline-flex;
+    flex-direction: column;
+    margin-right: 10px;
 }
 
-.divider {
+.detailCount {
+    font-weight: bold;
+}
+
+.additionalInfo {
+    display: flex;
+    align-items: center;
+}
+
+.share {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #1c4980;
+    border-radius: 15px;
+    padding: 2px 8px 2px 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkContainer {
     height: 16px;
-    margin: 0 5px;
-    border-right: 1px solid #DADCE0;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media screen and (min-width: 420px) {
-    .container {
-        width: 388px;
-    }
+.userIconWrapper {
+    position: relative;
+    display: flex;
+    height: 100%;
+    margin-left: 10px;
+}
 
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.userIcon {
+    height: 100%;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
 
-    .iconContainer {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
+.userCount {
+    margin-left: 4px;
+    font-weight: bold;
 }

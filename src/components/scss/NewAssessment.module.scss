@@ -1,13 +1,13 @@
 .container {
-    width: 346px;
-    border: 1px dashed #8DA4BF;
+    border: 1px dashed #8da4bf;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 30px;
-    background-color: #F6F8FA;
+    background-color: #f6f8fa;
+    margin-top: 16px;
 }
 
 .iconContainer {
@@ -29,10 +29,4 @@
 
 .description {
     text-align: center;
-}
-
-@media screen and (min-width: 420px) {
-    .container {
-        width: 388px;
-    }
 }

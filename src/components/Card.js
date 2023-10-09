@@ -1,116 +1,97 @@
 import React from "react";
 
+import IconWrapper from "./IconWrapper";
 import styles from "./scss/Card.module.scss";
 
-function Card() {
+import { Bag } from "../assets/icons/Bag";
+import { Clock } from "../assets/icons/Clock";
+import { Options } from "../assets/icons/Options";
+import { LinkBlack } from "../assets/icons/LinkBlack";
+
+function Card({
+    name,
+    purpose,
+    date,
+    duration,
+    questions,
+    link,
+    attemptedUsers,
+}) {
     return (
-        <>
-            <div className={styles.container}>
-                <div className={styles.header}>
-                    <div className={styles.iconContainer}>
-                        <svg
-                            width="20"
-                            height="20"
-                            viewBox="0 0 22 20"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M19.1677 3.49563H15.0796C14.8592 1.49813 13.6597 0 12.142 0H8.91065C8.07833 0 7.29498 0.449438 6.73195 1.29838C6.31579 1.89763 6.04651 2.67166 5.97307 3.49563H1.88495C0.856793 3.49563 0 4.36954 0 5.46817V18.0275C0 19.1011 0.832314 20 1.88495 20H19.1677C20.1958 20 21.0526 19.1261 21.0526 18.0275V5.46817C21.0526 4.36954 20.2203 3.49563 19.1677 3.49563ZM12.1175 9.23845H8.93513C8.20073 9.23845 7.58874 9.88764 7.58874 10.6866V11.4107C3.42717 10.437 1.51775 9.56305 1.22399 9.16355V5.66792C1.22399 5.29338 1.56671 4.99376 1.98286 4.99376H19.0698C19.4859 4.99376 19.8286 5.29338 19.8286 5.66792V9.13858C19.5349 9.53808 17.6255 10.412 13.4639 11.4107V10.6866C13.4639 9.88764 12.8519 9.23845 12.1175 9.23845ZM7.73562 2.24719C7.93146 1.97253 8.34761 1.49813 8.91065 1.49813H12.142C12.9743 1.49813 13.6842 2.47191 13.8556 3.74532H7.19706C7.2705 3.17104 7.46634 2.64669 7.73562 2.24719ZM19.1922 18.7266H1.86047C1.51775 18.7266 1.22399 18.427 1.22399 18.0774V10.6117C2.27662 11.161 4.18605 11.8352 7.68666 12.6092C7.90698 14.0574 9.10649 15.1561 10.5753 15.1561C12.0196 15.1561 13.2191 14.0574 13.4149 12.6092C16.9155 11.8352 18.825 11.161 19.8531 10.6117V18.0774C19.8286 18.427 19.5349 18.7266 19.1922 18.7266Z"
-                                fill="#6548EE"
-                            />
-                        </svg>
-                    </div>
-                    <div className="titleContainer">
-                        <p className={styles.title}>Math Assessment</p>
-                        <p className={styles.jobDateContainer}>
-                            <span>Job</span>
-                            <span className={styles.divider}></span>
-                            <span className={styles.dateContainer}>
-                                <svg
-                                    width="12"
-                                    height="13"
-                                    viewBox="0 0 12 13"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M7.99545 9.12313L8.85996 8.26594L6.60572 6.0117V2.84606H5.39428V6.52034L7.99545 9.12313ZM6 12.5C5.1708 12.5 4.39283 12.3438 3.66609 12.0315C2.93935 11.7192 2.30282 11.2899 1.75648 10.7435C1.21014 10.1972 0.780811 9.5599 0.468486 8.83167C0.156162 8.10344 0 7.32388 0 6.49299C0 5.6621 0.156162 4.88232 0.468486 4.15367C0.780811 3.42501 1.21014 2.79007 1.75648 2.24883C2.30282 1.70759 2.9401 1.28081 3.66833 0.968486C4.39656 0.656162 5.17612 0.5 6.00701 0.5C6.8379 0.5 7.61771 0.657386 8.34643 0.972158C9.07514 1.28693 9.70903 1.71412 10.2481 2.25373C10.7871 2.79333 11.2139 3.42787 11.5283 4.15734C11.8428 4.88681 12 5.6677 12 6.5C12 7.3292 11.8438 8.10717 11.5315 8.83391C11.2192 9.56065 10.7924 10.1972 10.2512 10.7435C9.70993 11.2899 9.07432 11.7192 8.34433 12.0315C7.61434 12.3438 6.8329 12.5 6 12.5ZM6.00727 11.23C7.31584 11.23 8.43011 10.7682 9.35006 9.8446C10.27 8.92099 10.73 7.80369 10.73 6.4927C10.73 5.18171 10.27 4.06684 9.35009 3.1481C8.43016 2.22937 7.3159 1.77 6.00733 1.77C4.69876 1.77 3.58206 2.22937 2.65723 3.1481C1.73241 4.06684 1.27 5.18171 1.27 6.4927C1.27 7.80369 1.7324 8.92099 2.6572 9.8446C3.582 10.7682 4.69869 11.23 6.00727 11.23Z"
-                                        fill="#8DA4BF"
-                                    />
-                                </svg>
-                            </span>
-                            <span className={styles.date}>20 Apr 23</span>
-                        </p>
-                    </div>
-                    <span className={styles.options}>
-                        <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 4 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M2.33333 3.33333C3.25381 3.33333 4 2.58714 4 1.66667C4 0.746192 3.25381 -4.02352e-08 2.33333 0C1.41286 4.02352e-08 0.666667 0.746192 0.666667 1.66667C0.666667 2.58714 1.41286 3.33333 2.33333 3.33333Z"
-                                fill="#1C4980"
-                            />
-                            <path
-                                d="M2.33333 8C3.25381 8 4 7.25381 4 6.33333C4 5.41286 3.25381 4.66667 2.33333 4.66667C1.41286 4.66667 0.666667 5.41286 0.666667 6.33333C0.666667 7.25381 1.41286 8 2.33333 8Z"
-                                fill="#1C4980"
-                            />
-                            <path
-                                d="M2.33333 12.6667C3.25381 12.6667 4 11.9205 4 11C4 10.0795 3.25381 9.33333 2.33333 9.33333C1.41286 9.33333 0.666667 10.0795 0.666667 11C0.666667 11.9205 1.41286 12.6667 2.33333 12.6667Z"
-                                fill="#1C4980"
-                            />
-                        </svg>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <IconWrapper svg={<Bag />} bgColor="#EBE8FD" />
+                <div>
+                    <p className={styles.title}>{name}</p>
+                    <p className={styles.jobDateContainer}>
+                        <span>{purpose}</span>
+                        <span className={styles.divider}></span>
+                        <span className={styles.dateContainer}>
+                            <Clock />
+                        </span>
+                        <span className={styles.date}>{date}</span>
+                    </p>
+                </div>
+                <span className={styles.options}>
+                    <Options />
+                </span>
+            </div>
+            <div className={styles.infoWrapper}>
+                <div>
+                    <span className={styles.detailsWrapper}>
+                        <span className={styles.detailCount}>
+                            {duration}
+                        </span>
+                        <span>Duration</span>
+                    </span>
+                    <span className={styles.detailsWrapper}>
+                        <span className={styles.detailCount}>
+                            {questions}
+                        </span>
+                        <span>Questions</span>
                     </span>
                 </div>
-                <div className={styles.infoWrapper}>
-                    <div className="durationQuestions">
-                        <span className={styles.durationWrapper}>
-                            <span className={styles.durationNumber}>00</span>
-                            <span className="durationText">Duration</span>
+                <div className={styles.additionalInfo}>
+                    <a href={link} target="_blank" className={styles.share}>
+                        <span className={styles.linkContainer}>
+                            <LinkBlack />
                         </span>
-                        <span className={styles.questionWrapper}>
-                            <span className={styles.durationNumber}>00</span>
-                            <span className="questionText">Questions</span>
-                        </span>
-                    </div>
-                    <div className={styles.additionalInfo}>
-                        <span className={styles.share}>
-                            <span className={styles.linkContainer}>
-                                <svg
-                                    width="12"
-                                    height="12"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M6.00027 1.28492L4.11465 3.17054L5.05746 4.11335L6.94308 2.22773C7.72089 1.44991 8.99369 1.44991 9.7715 2.22773C10.5493 3.00555 10.5493 4.27834 9.7715 5.05616L7.88589 6.94177L8.82869 7.88458L10.7143 5.99897C12.0154 4.69789 12.0154 2.586 10.7143 1.28492C9.41324 -0.016157 7.30134 -0.0161567 6.00027 1.28492ZM6.94308 7.88458L5.05746 9.7702C4.27964 10.548 3.00685 10.548 2.22903 9.7702C1.45121 8.99238 1.45121 7.71959 2.22903 6.94177L4.11465 5.05616L3.17184 4.11335L1.28622 5.99896C-0.0148547 7.30004 -0.0148547 9.41193 1.28622 10.713C2.5873 12.0141 4.69919 12.0141 6.00027 10.713L7.88589 8.82739L6.94308 7.88458ZM3.64324 7.41318L7.41448 3.64194L8.35729 4.58475L4.58605 8.35599L3.64324 7.41318Z"
-                                        fill="#1C4980"
-                                    />
-                                </svg>
+                        Share
+                    </a>
+                    {attemptedUsers.length > 0 && (
+                        <>
+                            <span
+                                style={{
+                                    width:
+                                        attemptedUsers.slice(0, 3).length *
+                                        20,
+                                }}
+                                className={styles.userIconWrapper}
+                            >
+                                {attemptedUsers
+                                    .slice(0, 3)
+                                    .map((item, idx) => (
+                                        <span
+                                            key={idx}
+                                            style={{
+                                                position: "absolute",
+                                                right: (attemptedUsers.slice(0, 3).length - 1) * 15 - 15 * idx,
+                                                backgroundColor: idx === 0 ? '#6548EE' : idx === 1 ? '#3079E1' : '#E9407A'
+                                            }}
+                                            className={`${styles.userIcon}`}
+                                        >{`${item.firstName[0]}${item.lastName[0]}`}</span>
+                                    ))}
                             </span>
-                            Share
-                        </span>
-                        {true ? (
-                            <>
-                                <span className={styles.userIconWrapper}>
-                                    <span className={`${styles.userIcon} ${styles.userIcon1}`}>LP</span>
-                                    <span className={`${styles.userIcon} ${styles.userIcon2}`}>LP</span>
-                                    <span className={`${styles.userIcon} ${styles.userIcon3}`}>LP</span>
+                            {attemptedUsers.length > 3 && (
+                                <span className={styles.userCount}>
+                                    +{attemptedUsers.length - 3}
                                 </span>
-                                <span className={styles.userCount}>+324</span>
-                            </>
-                        ) : (
-                            <span className={styles.userIcon}>LP</span>
-                        )}
-                    </div>
+                            )}
+                        </>
+                    )}
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
