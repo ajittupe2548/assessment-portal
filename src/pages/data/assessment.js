@@ -5,7 +5,7 @@ export const assessments = [
         date: "20 Apr 23",
         duration: 60,
         questions: 30,
-        link: "a.com",
+        link: "https://github.com/ajittupe2548/assessment-portal",
         attemptedUsers: [],
     },
     {
@@ -14,7 +14,7 @@ export const assessments = [
         date: "20 Apr 23",
         duration: 60,
         questions: 30,
-        link: "a.com",
+        link: "https://github.com/ajittupe2548/assessment-portal",
         attemptedUsers: [
             {
                 firstName: "Ajit",
@@ -132,7 +132,7 @@ export const assessments = [
         date: "20 Apr 23",
         duration: 60,
         questions: 30,
-        link: "a.com",
+        link: "https://github.com/ajittupe2548/assessment-portal",
         attemptedUsers: [
             {
                 firstName: "Ajit",
@@ -150,7 +150,7 @@ export const assessments = [
         date: "20 Apr 23",
         duration: 60,
         questions: 30,
-        link: "a.com",
+        link: "https://github.com/ajittupe2548/assessment-portal",
         attemptedUsers: [
             {
                 firstName: "Ajit",
@@ -172,7 +172,7 @@ export const assessments = [
         date: "20 Apr 23",
         duration: 60,
         questions: 30,
-        link: "a.com",
+        link: "https://github.com/ajittupe2548/assessment-portal",
         attemptedUsers: [
             {
                 firstName: "Ajit",
@@ -206,7 +206,7 @@ export const assessments = [
         date: "20 Apr 23",
         duration: 60,
         questions: 30,
-        link: "a.com",
+        link: "https://github.com/ajittupe2548/assessment-portal",
         attemptedUsers: [
             {
                 firstName: "Ajit",
@@ -236,7 +236,7 @@ export const assessments = [
         date: "20 Apr 23",
         duration: 60,
         questions: 30,
-        link: "a.com",
+        link: "https://github.com/ajittupe2548/assessment-portal",
         attemptedUsers: [
             {
                 firstName: "Ajit",
