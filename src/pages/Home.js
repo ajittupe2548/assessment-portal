@@ -29,6 +29,7 @@ function Home() {
                 <div>Unstop Assessment</div>
             </div>
             <div className={styles.mainContent}>
+                <Overview />
                 <div className={styles.subHeadingWrapper}>
                     <h2 className={styles.subHeading}>My Assessment</h2>
                     <div className={styles.filtersWrapper}>
@@ -43,7 +44,6 @@ function Home() {
                         </span>
                     </div>
                 </div>
-                <Overview />
                 <NewAssessment />
                 {assessments.map((item, idx) => (
                     <Card
