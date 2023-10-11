@@ -1,0 +1,83 @@
+.container {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    z-index: 5;
+    transition: transform 0.5s;
+    will-change: transform;
+    transform: translateX(-110%);
+    padding: 40px 20px;
+    background-color: #f2f8fe;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: gray;
+    z-index: 4;
+    opacity: 0.5;
+}
+
+.closeWrapper {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navItem {
+    position: relative;
+    list-style: none;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.navItem:hover {
+    border-color: #0073e6;
+    color: #0073e6;
+    background-color: #e5f1fc;
+
+    path {
+        fill: #0073e6;
+    }
+}
+
+.navIconWrapper {
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.divider {
+    border-bottom: 1px dashed #bacbd5;
+    margin: 10px 0;
+}
+
+.adminBadge {
+    position: absolute;
+    right: 10px;
+    font-size: 10px;
+    color: #d63500;
+    border: 1px solid #d63500;
+    padding: 2px 4px;
+    border-radius: 9px;
+}
