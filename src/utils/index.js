@@ -1,1 +1,7 @@
-export const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+export const addScrollLock = () => {
+    document.querySelector('body').classList.add('stop-scroll');
+}
+
+export const removeScrollLock = () => {
+    document.querySelector('body').classList.remove('stop-scroll');
+}
