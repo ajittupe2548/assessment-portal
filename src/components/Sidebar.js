@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './scss/Sidebar.module.scss';
+import { addScrollLock, removeScrollLock } from '../utils';
 
 import { Close } from '../assets/icons/Close';
 import { Dashboard } from '../assets/icons/Dashboard';
@@ -9,6 +10,12 @@ import { Assessment } from '../assets/icons/Assessment';
 import { RoundStatus } from '../assets/icons/RoundStatus';
 
 function Sidebar({ isActive = false, onClose }) {
+
+    useEffect(() => {
+        isActive ? addScrollLock() : removeScrollLock();
+
+    }, [isActive]);
+
     return (
         <>
             <div className={styles.container} style={{ transform: isActive ? 'translateX(0)' : null }}>
