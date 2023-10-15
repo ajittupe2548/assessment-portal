@@ -32,7 +32,8 @@ function NewAssessMent() {
     const handleSubmitClick = () => {
         const { name, purpose, date, duration, questions, link } = assessmentData;
         if (name && purpose && date && duration && questions && link) {
-            alert('Data add successfully!')
+            alert('Data add successfully!');
+            setAssessmentData({ ...initialAssessmentData });
         }
         else {
             alert('Enter valid data!')
