@@ -76,6 +76,9 @@ function NewAssessMent() {
 
                 <label className={styles.formLabel} htmlFor="assessment-link">Questions of Assesment</label>
                 <input className={styles.formItem} type="text" value={assessmentData.link} data-val="link" onChange={handleInputChange} placeholder="Add Link" id="assessment-link" />
+
+                <label className={styles.formLabel} htmlFor="assessment-link">Questions of Assesment</label>
+                <input className={styles.formItem} type="text" value={assessmentData.link} data-val="link" onChange={handleInputChange} placeholder="Add Link" id="assessment-link" />
             </Popup>
         </>
     );
