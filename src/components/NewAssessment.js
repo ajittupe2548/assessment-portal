@@ -65,7 +65,7 @@ function NewAssessMent() {
                 </select>
 
                 <label className={styles.formLabel} htmlFor="assessment-date">Date</label>
-                <input className={styles.formItem} type="date" value={assessmentData.date} data-val="date" onChange={handleInputChange} id="assessment-date" />
+                <input className={`${styles.formItem} ${styles.date}`} type="date" value={assessmentData.date} data-val="date" onChange={handleInputChange} id="assessment-date" />
 
                 <label className={styles.formLabel} htmlFor="assessment-duration">Duration of Assesment</label>
                 <input className={styles.formItem} type="number" value={assessmentData.duration} data-val="duration" onChange={handleInputChange} placeholder="Type Name" id="assessment-duration" />

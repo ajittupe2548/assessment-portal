@@ -71,3 +71,18 @@
     color: #fff;
     text-align: center;
 }
+
+.date {
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        padding: 0;
+        transform: translateY(-50%);
+    }
+}
