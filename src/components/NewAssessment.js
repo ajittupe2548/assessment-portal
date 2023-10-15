@@ -36,7 +36,7 @@ function NewAssessMent() {
             setAssessmentData({ ...initialAssessmentData });
         }
         else {
-            alert('Enter valid data!')
+            alert('Enter valid data!');
         }
     }
 
@@ -66,7 +66,7 @@ function NewAssessMent() {
                 </select>
 
                 <label className={styles.formLabel} htmlFor="assessment-date">Date</label>
-                <input className={`${styles.formItem} ${styles.date}`} type="date" value={assessmentData.date} data-val="date" onChange={handleInputChange} id="assessment-date" />
+                <input className={`${styles.formItem} ${styles.date}`} type="date" value={assessmentData.date} data-val="date" onChange={handleInputChange} id="assessment-date" placeholder="MM/DD/YYYY" />
 
                 <label className={styles.formLabel} htmlFor="assessment-duration">Duration of Assesment</label>
                 <input className={styles.formItem} type="number" value={assessmentData.duration} data-val="duration" onChange={handleInputChange} placeholder="Type Name" id="assessment-duration" />
@@ -74,10 +74,7 @@ function NewAssessMent() {
                 <label className={styles.formLabel} htmlFor="assessment-questions">Questions of Assesment</label>
                 <input className={styles.formItem} type="number" value={assessmentData.questions} data-val="questions" onChange={handleInputChange} placeholder="Type Name" id="assessment-questions" />
 
-                <label className={styles.formLabel} htmlFor="assessment-link">Questions of Assesment</label>
-                <input className={styles.formItem} type="text" value={assessmentData.link} data-val="link" onChange={handleInputChange} placeholder="Add Link" id="assessment-link" />
-
-                <label className={styles.formLabel} htmlFor="assessment-link">Questions of Assesment</label>
+                <label className={styles.formLabel} htmlFor="assessment-link">Link of the Assesment</label>
                 <input className={styles.formItem} type="text" value={assessmentData.link} data-val="link" onChange={handleInputChange} placeholder="Add Link" id="assessment-link" />
             </Popup>
         </>
