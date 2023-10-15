@@ -39,15 +39,11 @@ function Card({
             <div className={styles.infoWrapper}>
                 <div>
                     <span className={styles.detailsWrapper}>
-                        <span className={styles.detailCount}>
-                            {duration}
-                        </span>
+                        <span className={styles.detailCount}>{duration}</span>
                         <span>Duration</span>
                     </span>
                     <span className={styles.detailsWrapper}>
-                        <span className={styles.detailCount}>
-                            {questions}
-                        </span>
+                        <span className={styles.detailCount}>{questions}</span>
                         <span>Questions</span>
                     </span>
                 </div>
@@ -63,24 +59,31 @@ function Card({
                             <span
                                 style={{
                                     width:
-                                        attemptedUsers.slice(0, 3).length *
-                                        20,
+                                        attemptedUsers.slice(0, 3).length * 20,
                                 }}
                                 className={styles.userIconWrapper}
                             >
-                                {attemptedUsers
-                                    .slice(0, 3)
-                                    .map((item, idx) => (
-                                        <span
-                                            key={idx}
-                                            style={{
-                                                position: "absolute",
-                                                right: (attemptedUsers.slice(0, 3).length - 1) * 15 - 15 * idx,
-                                                backgroundColor: idx === 0 ? '#6548EE' : idx === 1 ? '#3079E1' : '#E9407A'
-                                            }}
-                                            className={`${styles.userIcon}`}
-                                        >{`${item.firstName[0]}${item.lastName[0]}`}</span>
-                                    ))}
+                                {attemptedUsers.slice(0, 3).map((item, idx) => (
+                                    <span
+                                        key={idx}
+                                        style={{
+                                            position: "absolute",
+                                            right:
+                                                (attemptedUsers.slice(0, 3)
+                                                    .length -
+                                                    1) *
+                                                    15 -
+                                                15 * idx,
+                                            backgroundColor:
+                                                idx === 0
+                                                    ? "#6548EE"
+                                                    : idx === 1
+                                                    ? "#3079E1"
+                                                    : "#E9407A",
+                                        }}
+                                        className={`${styles.userIcon}`}
+                                    >{`${item.firstName[0]}${item.lastName[0]}`}</span>
+                                ))}
                             </span>
                             {attemptedUsers.length > 3 && (
                                 <span className={styles.userCount}>

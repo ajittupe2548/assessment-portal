@@ -24,17 +24,20 @@ function Home() {
             left: 0,
             behavior: "smooth",
         });
-        setIsOpen(!isOpen)
-    }
+        setIsOpen(!isOpen);
+    };
 
     const hamburgerClickHandler = () => {
         setShowSidebar(true);
-    }
+    };
 
     return (
         <>
             <div className={styles.header}>
-                <div className={styles.hamburger} onClick={() => hamburgerClickHandler()}>
+                <div
+                    className={styles.hamburger}
+                    onClick={() => hamburgerClickHandler()}
+                >
                     <Hamburger />
                 </div>
                 <h1 className={styles.headingWrapper}>Assessment</h1>
@@ -46,12 +49,18 @@ function Home() {
                 <div className={styles.activeTab}>My Assessments</div>
                 <div>Unstop Assessment</div>
             </div>
-            <Sidebar isActive={showSidebar} onClose={() => setShowSidebar(false)} />
+            <Sidebar
+                isActive={showSidebar}
+                onClose={() => setShowSidebar(false)}
+            />
             <div className={styles.mainContent}>
                 <ExpandCollapse isOpen={isOpen}>
                     <Overview />
                 </ExpandCollapse>
-                <div className={styles.subHeadingWrapper} style={{ marginTop: isOpen ? 10 : null }}>
+                <div
+                    className={styles.subHeadingWrapper}
+                    style={{ marginTop: isOpen ? 10 : null }}
+                >
                     <h2 className={styles.subHeading}>My Assessment</h2>
                     <div className={styles.filtersWrapper}>
                         <span className={styles.subHeadingIcon}>
@@ -60,7 +69,10 @@ function Home() {
                         <span className={styles.subHeadingIcon}>
                             <Filter />
                         </span>
-                        <span className={styles.subHeadingIcon} onClick={() => chartClickHandler()}>
+                        <span
+                            className={styles.subHeadingIcon}
+                            onClick={() => chartClickHandler()}
+                        >
                             <Stats />
                         </span>
                     </div>

@@ -1,6 +1,6 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const joinPath = (pathname) => path.join(__dirname, pathname);
@@ -16,7 +16,7 @@ module.exports = {
     },
     output: {
         path: PATHS.BUILD_DIR,
-        filename: 'bundle.js',
+        filename: "bundle.js",
     },
     module: {
         rules: [
@@ -34,8 +34,11 @@ module.exports = {
                     {
                         loader: "babel-loader",
                         options: {
-                            presets: ['@babel/preset-env', '@babel/preset-react']
-                        }
+                            presets: [
+                                "@babel/preset-env",
+                                "@babel/preset-react",
+                            ],
+                        },
                     },
                 ],
             },
@@ -59,7 +62,7 @@ module.exports = {
                     "sass-loader",
                 ],
             },
-        ]
+        ],
     },
     devServer: {
         static: {
@@ -79,4 +82,4 @@ module.exports = {
             template: PATHS.SOURCE_DIR + "/index.html",
         }),
     ],
-}
+};
